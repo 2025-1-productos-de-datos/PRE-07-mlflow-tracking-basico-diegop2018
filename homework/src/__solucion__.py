@@ -2,7 +2,7 @@
 import uuid
 
 import mlflow
-
+import mlflow.sklearn
 from ._internals.calculate_metrics import calculate_metrics
 from ._internals.parse_argument import parse_argument
 from ._internals.prepare_data import prepare_data
@@ -16,7 +16,7 @@ RANDOM_STATE = 123456
 
 
 def main():
-    mlflow.set_tracking_uri("file:./mlruns")
+    # mlflow.set_tracking_uri("file:./mlruns")
     args = parse_argument()
     model = select_model(args)
 
